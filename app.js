@@ -13,7 +13,7 @@ module.exports = async (context, cb) => {
     APIARY_ID,
   } = context.secrets;
 
-  const swaggerDocs = request({
+  const swaggerDocs = await request({
     url: SWAGGER_URL,
     json: true,
   });
